@@ -1,0 +1,40 @@
+.rating {
+  width: fit-content;
+  height: 14px;
+
+  display: flex;
+
+  & svg:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+
+    background-color: white;
+  }
+
+  &-star:not(:last-child) {
+    margin-right: 2px;
+  }
+
+  &-overlay {
+    background-color: black;
+    mix-blend-mode: color;
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    width: 30%;
+
+    @supports (mix-blend-mode: color) {
+      mix-blend-mode: color;
+      opacity: unset;
+    }
+  }
+}

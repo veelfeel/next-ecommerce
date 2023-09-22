@@ -1,0 +1,47 @@
+.breadcrumbs {
+  margin-bottom: 12px;
+  overflow-x: auto;
+
+  display: flex;
+
+  &__link {
+    display: flex;
+
+    & a {
+      &:hover {
+        color: inherit;
+      }
+    }
+
+    &:last-child {
+      & a {
+        color: inherit;
+        cursor: default;
+      }
+    }
+
+    & a {
+      width: max-content;
+      font-size: 14px;
+      color: #8f8f8f;
+    }
+  }
+
+  &__arrow {
+    margin: auto 6px 6px 8px;
+
+    & span {
+      width: 5px;
+      height: 1px;
+      background-color: #747474;
+
+      &:nth-child(1) {
+        transform: translateY(-2px) rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: translateY(0px) rotate(-45deg);
+      }
+    }
+  }
+}

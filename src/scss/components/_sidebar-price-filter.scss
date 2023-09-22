@@ -1,0 +1,158 @@
+.price-content {
+  padding: 8px 0 0;
+  padding-bottom: 28px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.row[data-temp="grid"] .price-group {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.price-input-group {
+  width: 50%;
+  height: 48px;
+  position: relative;
+
+  & span {
+    position: absolute;
+    top: 16px;
+    color: #303030;
+    font-weight: 300;
+    font-size: 12px;
+    pointer-events: none;
+
+    &:nth-child(1) {
+      left: 10px;
+    }
+
+    &:nth-child(2) {
+      right: 10px;
+    }
+  }
+
+  & input {
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid #d5d5d5;
+    outline: none;
+    padding: 0 12px 0 16px;
+
+    &:focus {
+      border-color: rgb(255 217 0 / 38%);
+      outline: 3px solid rgb(255 235 124 / 38%);
+    }
+
+    &::placeholder {
+      color: #a7a7a7;
+    }
+  }
+}
+
+.price-reset {
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+
+.price-reset::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  right: 8px;
+  transform: rotate(-45deg);
+  background-color: #adadad;
+}
+
+.price-reset::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  right: 8px;
+  transform: rotate(45deg);
+  background-color: #adadad;
+}
+
+.price-input__span {
+  padding: 0 5px;
+  font-weight: 300;
+  color: #d5d5d5;
+}
+
+.range-slider {
+  top: 2px;
+  height: 2px;
+  position: relative;
+  background-color: #ddd;
+  border-radius: 5px;
+}
+
+.progress {
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #ffac59;
+}
+
+input[type="range"] {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -2px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: none;
+  background: none;
+  appearance: none;
+  pointer-events: none;
+  cursor: pointer;
+}
+
+input[type="range"]:active,
+input[type="range"]:focus,
+input[type="range"]::-moz-focus-outer {
+  border: none;
+  outline: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+  position: relative;
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  border: 2px solid #ffac59;
+  outline: transparent;
+  background-color: #fff;
+  appearance: none;
+  pointer-events: all;
+  transition: $transition;
+
+  &:active {
+    outline: 6px solid #ffd15d63;
+    transition: $transition;
+  }
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  position: relative;
+  height: 19px;
+  width: 19px;
+  border-radius: 50%;
+  border: 2px solid #ffac59;
+  outline: transparent;
+  background-color: white;
+  appearance: none;
+  pointer-events: all;
+  transition: $transition;
+
+  &:active {
+    outline: 6px solid #ffd15d63;
+    transition: $transition;
+  }
+}

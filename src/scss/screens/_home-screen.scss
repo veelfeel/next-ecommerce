@@ -1,0 +1,11 @@
+.home-screen {
+  &__promo-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+
+    @media (max-width: 991.9px) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

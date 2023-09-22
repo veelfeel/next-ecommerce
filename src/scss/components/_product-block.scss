@@ -1,0 +1,221 @@
+.product-block {
+  padding: 1.25rem;
+  border-radius: 10px;
+  display: grid;
+  background-color: white;
+
+  @media (max-width: 767px) {
+    grid-template-areas:
+      "img title title title"
+      "rating title title title"
+      "price ... addFavourites addCart"
+      "countInStock countInStock countInStock countInStock";
+    grid-template-rows: auto 40px 60px 34px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 0.8rem;
+  }
+
+  &:hover {
+    box-shadow: 0px 2px 4px #00000012;
+  }
+
+  &__inner-img {
+    height: 8rem;
+    width: 8rem;
+    grid-area: img;
+
+    @media (max-width: 991.9px) {
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  & a {
+    grid-area: title;
+  }
+
+  &__title {
+    max-width: 100%;
+    margin-bottom: -5px;
+    text-align: left;
+    font-weight: normal;
+
+    @media (max-width: 500px) {
+      font-size: 14px;
+    }
+  }
+
+  & .rating {
+    grid-area: rating;
+    align-self: flex-end;
+  }
+
+  &__price {
+    font-size: 20px;
+    font-weight: 600;
+    justify-self: flex-end;
+    grid-area: price;
+
+    @media (max-width: 500px) {
+      font-size: 1.1rem;
+    }
+  }
+
+  &__favourites-button {
+    justify-self: flex-end;
+    grid-area: addFavourites;
+    cursor: pointer;
+
+    &:hover {
+      & svg {
+        transform: scale(1);
+        transition: transform $transition;
+      }
+    }
+
+    & svg {
+      display: block;
+      width: 19px;
+      height: 19px;
+      margin: auto;
+      transform: scale(0.9);
+      fill: none;
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+      stroke: #c9c9c9;
+      stroke-width: 3;
+      cursor: pointer;
+      transition: $transition;
+
+      @media (max-width: 767px) {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  & .button-primary {
+    grid-area: addCart;
+
+    @media (max-width: 500px) {
+      min-width: auto;
+    }
+  }
+
+  &__count-in-stock {
+    font-size: 14px;
+    align-self: flex-end;
+    grid-area: countInStock;
+  }
+}
+
+.products-container {
+  display: grid;
+  grid-gap: 10px;
+
+  &--grid {
+    grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+
+    @media (max-width: 500px) {
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    }
+
+    @media (max-width: 400px) {
+      grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    }
+
+    @media (max-width: 300px) {
+      grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+    }
+
+    & .product-block {
+      grid-template-rows: 1fr auto 0.15fr 0.2fr 0.2fr auto;
+      grid-template-columns: 2.6rem 1fr;
+      grid-template-areas:
+        "img img"
+        "title title"
+        "rating rating"
+        "countInStock countInStock"
+        "price price"
+        "addFavourites addCart";
+      gap: 0.8rem;
+
+      &__inner-img {
+        margin-right: 0;
+      }
+
+      &__count-in-stock {
+        align-self: center;
+      }
+
+      &__price {
+        justify-self: flex-start;
+      }
+
+      &__favourites-button {
+        justify-self: flex-start;
+
+        @media (max-width: 500px) {
+          justify-self: center;
+        }
+      }
+
+      & .button-primary {
+        width: 100%;
+      }
+    }
+  }
+
+  &--list {
+    grid-template-columns: 1fr;
+
+    & .product-block {
+      grid-template-columns: auto auto 1.8rem auto;
+      grid-template-rows: 1.5fr 1.5fr auto;
+      grid-template-areas:
+        "img title title price"
+        "img rating ... ..."
+        "img countInStock addFavourites addCart";
+      gap: 0.6rem;
+
+      @media (max-width: 991.9px) {
+        grid-template-rows: auto 0.8fr 1fr;
+      }
+
+      @media (max-width: 500px) {
+        grid-template-columns: auto 1.5rem 5.8rem;
+        grid-template-rows: auto auto 2rem auto;
+        grid-template-areas:
+          "img img img"
+          "title title title"
+          "rating countInStock countInStock"
+          "price addFavourites addCart";
+      }
+
+      & .rating {
+        @media (max-width: 500px) {
+          width: auto;
+        }
+      }
+
+      &__price {
+        @media (max-width: 500px) {
+          align-self: center;
+          justify-self: flex-start;
+        }
+      }
+
+      &__favourites-button {
+        justify-self: flex-start;
+      }
+    }
+  }
+}
