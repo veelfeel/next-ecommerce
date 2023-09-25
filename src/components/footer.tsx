@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-top">
           <Link href="/" className="logo">
-            Condi-K
+            Condik
           </Link>
           <div className="footer-top-item">
             <ul className="social">

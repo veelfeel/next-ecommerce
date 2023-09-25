@@ -12,7 +12,7 @@ export default function FiltersContainer() {
     <div className="filters-container">
       <Sort />
       <ViewProducts />
-      {windowWidth <= 991 && <Filter />}
+      {windowWidth !== undefined && windowWidth <= 991 && <Filter />}
     </div>
   );
 }

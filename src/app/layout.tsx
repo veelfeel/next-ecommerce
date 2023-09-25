@@ -2,13 +2,7 @@ import Footer from "@/components/footer";
 import Header from "@/components/Header";
 
 import "./globals.scss";
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Condik - супермаркет кондиционеров",
-  description:
-    "Официальный сайт интернет-магазина сплит-систем Condik. Большой ассортимент бытовых и промышленных кондиционеров, бесплатная доставка по Сочи.",
-};
+import BottomBarsContainer from "@/components/BottomMobilebar/BottomBarsContainer";
 
 export default function RootLayout({
   children,
@@ -21,6 +15,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <BottomBarsContainer />
       </body>
     </html>
   );

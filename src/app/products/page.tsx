@@ -3,6 +3,14 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FiltersContainer from "@/components/FiltersContainer";
 import Product from "@/components/Product";
 import Sidebar from "@/components/Sidebar";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "Купить Кондиционеры в интернет-магазине Condik, отличные цены, бесплатная доставка по городу Сочи. Кондиционеры - огромный каталог, детальная информация, описание и рейтинги",
+  description:
+    "Доступные цены на Кондиционеры в интернет-магазине www.condik.ru. Купить Кондиционеры по телефону 8 (988) 148-28-38",
+};
 
 const products = [
   {

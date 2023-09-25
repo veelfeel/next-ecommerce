@@ -1,20 +1,22 @@
+"use client";
+
 import React from "react";
 
-export const Search: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
-  placeholder,
-}) => {
+type SearchProps = React.ComponentPropsWithoutRef<"input">;
+
+export default function Search({ placeholder }: SearchProps) {
   const [value, setValue] = React.useState("");
   const [searchOverlayIsShow, setSearchOverlayIsShow] = React.useState(false);
 
-  const onChangeInput = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   };
 
-  const onFocusInput = () => {
+  const onFocus = () => {
     setSearchOverlayIsShow(true);
   };
 
-  const onBlurInput = () => {
+  const onBlur = () => {
     setSearchOverlayIsShow(false);
   };
 
@@ -23,9 +25,9 @@ export const Search: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
       <div className="input-search">
         <input
           value={value}
-          onChange={onChangeInput}
-          onFocus={onFocusInput}
-          onBlur={onBlurInput}
+          onChange={onChange}
+          onFocus={onFocus}
+          onBlur={onBlur}
           placeholder={placeholder}
           type="text"
         />
@@ -42,4 +44,4 @@ export const Search: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({
       ></div>
     </>
   );
-};
+}

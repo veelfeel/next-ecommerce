@@ -11,7 +11,7 @@ export default function Sidebar() {
 
   return (
     <>
-      {windowWidth <= 991 ? (
+      {windowWidth !== undefined && windowWidth <= 991 ? (
         createPortal(<MobileSidebar />, document.body)
       ) : (
         <DesktopSidebar />

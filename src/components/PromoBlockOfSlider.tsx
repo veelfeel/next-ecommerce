@@ -15,6 +15,7 @@ export default function PromoBlockOfSlider({
   return (
     <Link href="#">
       <Image
+        priority={true}
         width={600}
         height={245}
         src={imageUrl}

@@ -1,0 +1,51 @@
+.bottom-navbar {
+  padding: 10px 0;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 12px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #989898;
+
+    &:nth-child(3) {
+      & .bottom-navbar__item-counter {
+        right: 2px;
+      }
+    }
+
+    &-counter {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: $primary;
+      color: white;
+    }
+
+    & svg {
+      margin-bottom: 2px;
+    }
+
+    & b {
+      color: #4e4e4e;
+    }
+  }
+}

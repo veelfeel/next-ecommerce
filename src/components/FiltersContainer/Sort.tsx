@@ -35,7 +35,9 @@ export default function Sort() {
 
   return (
     <div className="sort">
-      {windowWidth >= 992 && <span>Сортировка:</span>}
+      {windowWidth !== undefined && windowWidth >= 992 && (
+        <span>Сортировка:</span>
+      )}
       <div
         onClick={() => setSortingIsOpen(!sortingIsOpen)}
         className="sort__select"

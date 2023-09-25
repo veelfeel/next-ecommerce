@@ -9,6 +9,7 @@
   &__item {
     & .promo-block-of-slider__image {
       width: 100%;
+      height: auto;
       object-fit: cover;
 
       @media (max-width: 500px) {

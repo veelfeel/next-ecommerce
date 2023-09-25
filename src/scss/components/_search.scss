@@ -13,18 +13,6 @@
     @media (max-width: 991px) {
       width: 100%;
     }
-
-    &:hover {
-      border-color: #ff888891;
-      background-color: white;
-      transition: $transition;
-    }
-
-    &:focus {
-      border: 1px solid $primary;
-      background-color: white;
-      transition: $transition;
-    }
   }
 
   & .svg-search {
