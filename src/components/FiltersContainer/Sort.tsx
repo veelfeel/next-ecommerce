@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { useWindowWidth } from "@/hooks/useWindowWidth";
 
 enum SortEnum {
   RATING_DESC = "-rating",
@@ -27,17 +26,13 @@ const sortNames: SortItem[] = [
 export default function Sort() {
   const [sortingIsOpen, setSortingIsOpen] = React.useState(false);
 
-  const windowWidth = useWindowWidth();
-
   const onClickNameSort = (obj: SortItem) => {
     setSortingIsOpen(false);
   };
 
   return (
     <div className="sort">
-      {windowWidth !== undefined && windowWidth >= 992 && (
-        <span>Сортировка:</span>
-      )}
+      <span>Сортировка:</span>
       <div
         onClick={() => setSortingIsOpen(!sortingIsOpen)}
         className="sort__select"

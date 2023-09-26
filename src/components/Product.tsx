@@ -27,7 +27,7 @@ export default function Product({
           <Image
             width={128}
             height={128}
-            src={imageUrl}
+            src="/products/dexp-ac-ch9onf.jpg"
             alt={title}
             className="product-block__img"
           />
@@ -35,7 +35,7 @@ export default function Product({
           <div className="skeleton"></div>
         )}
       </div>
-      <Link href={`/product/${_id}`}>
+      <Link href={`/products/${_id}`}>
         <h4 className="product-block__title text-primary">
           {title + " " + specs}
         </h4>
