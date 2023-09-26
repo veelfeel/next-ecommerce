@@ -1,10 +1,12 @@
+interface AddFavouritesButtonProps {
+  id: string | null;
+  onClickAddFavourites: () => void;
+}
+
 export default function AddFavouritesButton({
   id,
   onClickAddFavourites,
-}: {
-  id: string | null;
-  onClickAddFavourites: () => void;
-}) {
+}: AddFavouritesButtonProps) {
   return (
     <button
       className="product-block__favourites-button"

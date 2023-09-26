@@ -40,7 +40,7 @@ export default function Product({
           {title + " " + specs}
         </h4>
       </Link>
-      <CardRating rating={4.1} />
+      <CardRating rating={rating} />
       {countInStock && (
         <span className="product-block__count-in-stock">
           В наличии: {countInStock} шт.
